@@ -1,0 +1,56 @@
+{
+    "cache_ttl": 3600,
+    "endpoints": [
+        {
+            "backend": [
+                {
+                    "extra_config": {
+                        "github.com/devopsfaith/krakend-martian": {
+                            "fifo.Group": {
+                                "aggregateErrors": true,
+                                "modifiers": [
+                                    {
+                                        "querystring.MarvelModifier": {
+                                            "private": "your Marvel api private key",
+                                            "public": "your Marvel api public key",
+                                            "scope": [
+                                                "request"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "scope": [
+                                    "request",
+                                    "response"
+                                ]
+                            }
+                        }
+                    },
+                    "host": [
+                        "http://gateway.marvel.com"
+                    ],
+                    "url_pattern": "/v1/public/characters?name={name}",
+                    "whitelist": [
+                      "data.results",
+                      "attributionHTML"
+                    ],
+                    "mapping": { "data": "characters"}
+                }
+            ],
+            "endpoint": "/character/{name}",
+            "method": "GET"
+        }
+    ],
+    "extra_config": {
+        "github_com/devopsfaith/krakend-gologging": {
+            "level": "INFO",
+            "prefix": "[KRAKEND]",
+            "stdout": true,
+            "syslog": false
+        }
+    },
+    "name": "My lovely gateway",
+    "port": 8080,
+    "timeout": "3s",
+    "version": 2
+}

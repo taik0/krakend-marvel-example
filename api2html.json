@@ -1,0 +1,14 @@
+{
+	"templates":{
+		"character": "character.mustache"
+	},
+	"pages":[
+    {
+      "name": "character",
+      "URLPattern": "/character/:character",
+      "BackendURLPattern": "http://krakend:8080/character/:character",
+      "CacheTTL": "3600s",
+      "Template": "character"
+    }
+  ]
+}

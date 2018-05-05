@@ -1,0 +1,19 @@
+version: '3'
+services:
+  krakend:
+    image: "devopsfaith/krakend:custom"
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/etc/krakend
+    working_dir: /etc/krakend
+  api2html:
+    image: "devopsfaith/api2html:latest"
+    ports:
+      - "8081:8080"
+    volumes:
+      - .:/tmp/api2html
+    working_dir: /tmp/api2html
+    command: serve -d -c api2html.json
+    links:
+      - krakend

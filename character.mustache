@@ -1,0 +1,30 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+{{#Data.characters.results}}
+  <div class="container">
+    <a href="/character/{{name}}">
+    <div class="row">
+      <div class="col-4">
+        <img class="rounded-right" src="{{thumbnail.path}}/landscape_xlarge.{{thumbnail.extension}}" alt="{{name}}">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+          <h5 class="mt-0">{{name}}</h5>
+          <h6 class="mt-1">Id: {{id}}</h6>
+          {{description}}
+      </div>
+    </div>
+{{/Data.characters.results}}
+<div class="row">
+  <div class="col-4">
+    {{{Data.attributionHTML}}}
+  </div>
+</div>
+</a>
+</div>
+</body>
+</hmtl>

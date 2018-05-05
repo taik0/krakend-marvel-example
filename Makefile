@@ -1,5 +1,5 @@
 KRAKENDCE_REPO=https://github.com/devopsfaith/krakend-ce
-API2HTML_REPO=https://github.com/taik0/api2html
+API2HTML_REPO=https://github.com/devopsfaith/api2html
 IMPORT_FILE=marvel.go
 
 build_krakend:

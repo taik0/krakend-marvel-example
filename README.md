@@ -10,6 +10,8 @@ You need an Marvel comics API Key to run this example:
 
 https://developer.marvel.com/
 
+Once you have your own API Key, configure the `github.com/devopsfaith/krakend-martian` extra_config section in the `krakend.json` config file.
+
 ## Build KrakenD and api2html
 
 You need docker to make this example work as is (everything is compiled using docker, you don't need go)

@@ -1,6 +1,6 @@
 # My first fullstack MVP
 
-This is the example used in [this blog post](http://www.krakend.io/blog/my-first-fullstack-mvp/).
+This is the example used in [this blog post](http://www.krakend.io/blog/website-development-as-a-sysadmin/).
 
 Can be used as simple example of how to run KrakenD and api2html too.
 
